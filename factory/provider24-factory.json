@@ -1,0 +1,9 @@
+{
+	"name": "provider24-factory",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d41a39b1-7d69-4411-bad1-3e607aa8952f",
+		"tenantId": "068634a1-43eb-472f-8d92-dee00135708b"
+	}
+}
