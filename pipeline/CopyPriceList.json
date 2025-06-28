@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_c63",
+				"name": "CopyExcelToSQL",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
