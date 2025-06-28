@@ -11,32 +11,23 @@
 			{
 				"name": "Id",
 				"type": "int",
-				"precision": 10,
-				"scale": 0
+				"precision": 10
 			},
 			{
 				"name": "ProductName",
-				"type": "nvarchar",
-				"precision": 0,
-				"scale": 0
+				"type": "nvarchar"
 			},
 			{
 				"name": "ProviderName",
-				"type": "nvarchar",
-				"precision": 0,
-				"scale": 0
+				"type": "nvarchar"
 			},
 			{
 				"name": "LastReviewDt",
-				"type": "nvarchar",
-				"precision": 0,
-				"scale": 0
+				"type": "nvarchar"
 			},
 			{
 				"name": "ProductPrice",
-				"type": "nvarchar",
-				"precision": 0,
-				"scale": 0
+				"type": "nvarchar"
 			}
 		],
 		"typeProperties": {
