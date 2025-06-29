@@ -8,7 +8,11 @@
 			"database": "provider24",
 			"encrypt": "mandatory",
 			"trustServerCertificate": true,
-			"authenticationType": "SystemAssignedManagedIdentity"
+			"authenticationType": "UserAssignedManagedIdentity",
+			"credential": {
+				"referenceName": "credential1",
+				"type": "CredentialReference"
+			}
 		}
 	}
 }
