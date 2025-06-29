@@ -20,7 +20,7 @@
 					},
 					{
 						"name": "Destination",
-						"value": "dbo.NewTable"
+						"value": "dbo.ExcelFileRaw"
 					}
 				],
 				"typeProperties": {
@@ -39,7 +39,6 @@
 						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
 						"sqlWriterUseTableLock": false,
-						"tableOption": "autoCreate",
 						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
