@@ -51,8 +51,8 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "Producto",
-									"type": "String"
+									"type": "String",
+									"ordinal": 1
 								},
 								"sink": {
 									"name": "ProductName",
@@ -62,8 +62,8 @@
 							},
 							{
 								"source": {
-									"name": "Fecha 1",
-									"type": "String"
+									"type": "String",
+									"ordinal": 2
 								},
 								"sink": {
 									"name": "LastReviewDt",
@@ -73,8 +73,8 @@
 							},
 							{
 								"source": {
-									"name": "Provedor",
-									"type": "String"
+									"type": "String",
+									"ordinal": 3
 								},
 								"sink": {
 									"name": "ProviderName",
@@ -84,8 +84,8 @@
 							},
 							{
 								"source": {
-									"name": "Precio",
-									"type": "String"
+									"type": "String",
+									"ordinal": 4
 								},
 								"sink": {
 									"name": "ProductPrice",
@@ -109,7 +109,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "DestinationDataset_c63",
 						"type": "DatasetReference"
 					}
 				]

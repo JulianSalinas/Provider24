@@ -21,31 +21,24 @@
 		},
 		"schema": [
 			{
-				"name": "Producto",
 				"type": "String"
 			},
 			{
-				"name": "Fecha 1",
 				"type": "String"
 			},
 			{
-				"name": "Provedor",
 				"type": "String"
 			},
 			{
-				"name": "Precio",
 				"type": "String"
 			},
 			{
-				"name": "Prop_4",
 				"type": "String"
 			},
 			{
-				"name": "Prop_5",
 				"type": "String"
 			},
 			{
-				"name": "Prop_6",
 				"type": "String"
 			}
 		]
