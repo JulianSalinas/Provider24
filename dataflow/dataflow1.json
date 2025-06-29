@@ -12,7 +12,19 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DestinationDataset_c63",
+						"type": "DatasetReference"
+					},
+					"name": "sink1",
+					"rejectedDataLinkedService": {
+						"referenceName": "AzureBlobStorage1",
+						"type": "LinkedServiceReference"
+					}
+				}
+			],
 			"transformations": [],
 			"scriptLines": [
 				"source(output(",
@@ -28,7 +40,36 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
 				"     skipLines: 1,",
-				"     maxColumns: 4) ~> source1"
+				"     maxColumns: 4) ~> source1",
+				"source1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          Id as integer,",
+				"          ProductName as string,",
+				"          ProviderName as string,",
+				"          LastReviewDt as string,",
+				"          ProductPrice as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     truncate:true,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     saveOrder: 1,",
+				"     errorHandlingOption: 'allErrors',",
+				"     outputRejectedData: true,",
+				"     rejectedData_container: 'price-lists',",
+				"     transactionCommit: 'single',",
+				"     reportSuccessOnError: false,",
+				"     mapColumn(",
+				"          ProductName,",
+				"          ProviderName,",
+				"          LastReviewDt,",
+				"          ProductPrice",
+				"     )) ~> sink1"
 			]
 		}
 	}
