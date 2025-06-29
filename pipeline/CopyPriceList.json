@@ -16,20 +16,23 @@
 				"userProperties": [
 					{
 						"name": "Source",
-						"value": "price-lists//Lista Precios.xlsx"
+						"value": "price-lists//Lista Precios.csv"
 					},
 					{
 						"name": "Destination",
-						"value": "dbo.ExcelFileRaw"
+						"value": "dbo.NewTable"
 					}
 				],
 				"typeProperties": {
 					"source": {
-						"type": "ExcelSource",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
 							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -40,15 +43,16 @@
 						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
+					"parallelCopies": 1,
 					"validateDataConsistency": false,
+					"dataIntegrationUnits": 4,
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
 							{
 								"source": {
 									"name": "Producto",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "ProductName",
@@ -59,8 +63,7 @@
 							{
 								"source": {
 									"name": "Fecha 1",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "LastReviewDt",
@@ -71,8 +74,7 @@
 							{
 								"source": {
 									"name": "Provedor",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "ProviderName",
@@ -83,8 +85,7 @@
 							{
 								"source": {
 									"name": "Precio",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "ProductPrice",
@@ -102,7 +103,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_c63",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				],
